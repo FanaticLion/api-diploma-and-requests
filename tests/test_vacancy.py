@@ -1,4 +1,4 @@
- from src.vacancy import Vacancy
+from src.vacancy import Vacancy
 
 
 def test_vacancy_creation():

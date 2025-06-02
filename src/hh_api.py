@@ -1,9 +1,11 @@
 import requests
 from typing import List, Dict
-from .abstract_api import VacancyAPI
+from src.abstract_api import VacancyAPI
 
 
 class HeadHunterAPI(VacancyAPI):
+    """Класс для работы с API HeadHunter"""
+
     BASE_URL = "https://api.hh.ru/vacancies"
 
     def __init__(self):
@@ -17,7 +19,7 @@ class HeadHunterAPI(VacancyAPI):
         self.__connected = True
 
     def get_vacancies(self, query: str, count: int = 100) -> List[Dict]:
-        """Получить вакансии с hh.ru"""
+        """Получение вакансий с hh.ru"""
         if not self.__connected:
             self.connect()
 

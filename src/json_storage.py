@@ -1,8 +1,8 @@
 import json
 from pathlib import Path
 from typing import List, Dict
-from .vacancy import Vacancy
-from .abstract_storage import Storage
+from src.vacancy import Vacancy
+from src.abstract_storage import Storage
 
 
 class JSONStorage(Storage):
